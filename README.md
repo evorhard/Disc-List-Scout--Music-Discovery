@@ -2,7 +2,7 @@
 
 ## Description
 
-Disc List Scout is a Python-based application designed to help the way music enthusiasts discover new tunes. It allows users to input an album title, then scours user-curated lists on platforms like Discogs and RateYourMusic to compile a Spotify playlist. This tool aims to provide a unique and personalized music discovery experience.
+Disc List Scout is a Python-based application designed to help the way music enthusiasts discover new albums. The way it does this is by allowing users to input an album title, then scouring user-curated lists on platforms like Discogs and RateYourMusic to compile a Spotify playlist. This tool aims to provide a unique and personalized music discovery experience.
 
 ## Motivation
 
@@ -30,7 +30,13 @@ While Disc List Scout is currently a personal project, I may consider opening it
 
 ## License
 
-_This project is yet to be licensed. The license will be added at a later stage of development._
+This project is licensed under the MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Acknowledgments
 
