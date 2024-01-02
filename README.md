@@ -2,11 +2,11 @@
 
 ## Description
 
-Disc List Scout is a Python-based application designed to help the way music enthusiasts discover new albums. The way it does this is by allowing users to input an album title, then scouring user-curated lists on platforms like Discogs and RateYourMusic to compile a Spotify playlist. This tool aims to provide a unique and personalized music discovery experience.
+Disc List Scout is a Python-based application designed to help the way music enthusiasts discover new albums. The way it does this is by allowing users to input an album title, then scouring user-curated lists on platforms like Discogs and RateYourMusic to compile a Spotify playlist.
 
 ## Motivation
 
-This project was born out of a personal passion for discovering new music and the desire to streamline the process. As an avid music listener and programmer, I wanted to create a solution that could merge these interests, making the exploration of music both efficient and enjoyable.
+I personally love scouring lists of others wherein an album I love lives; however the process of manually adding a song to a "to listen" list is tedious to say the least. I listen to music constantly while programming or doing other work/hobbies. And I always want to find new music, so I wanted to create a solution that could make finding new albums to give a listen easy.
 
 ## Tech Stack
 
