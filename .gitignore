@@ -3,7 +3,7 @@
 
 ## Personally added ignores ##
 planning.md
-disc_list_scout-music_discovery.zip
+disc_list_scout-music_discovery.*
 src/config.py
 
 ### Python ###
