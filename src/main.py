@@ -1,7 +1,3 @@
-"""
-Entry point for Disc List Scout
-"""
-
 import sys
 
 from PyQt5.QtWidgets import QApplication

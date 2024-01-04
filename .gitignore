@@ -4,6 +4,7 @@
 ## Personally added ignores ##
 planning.md
 disc_list_scout-music_discovery.zip
+src/config.py
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
