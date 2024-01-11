@@ -11,7 +11,7 @@ I personally love scouring lists of others wherein an album I love lives; howeve
 ## Tech Stack
 
 - **Language**: Python
-- **Libraries**: Requests, BeautifulSoup (for web scraping), Spotipy (for Spotify integration), PyQT5 (for GUI)
+- **Libraries**: Requests, Flask
 - **APIs**: Spotify API
 
 ## Planned Features
