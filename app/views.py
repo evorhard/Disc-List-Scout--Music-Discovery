@@ -1,7 +1,8 @@
 from urllib import parse as urllibparse
 
-from flask import Blueprint, jsonify, redirect, session, request
 from datetime import datetime
+from flask import Blueprint, jsonify, redirect, session, render_template, request
+from loguru import logger
 
 # Local imports
 from config import (
@@ -15,7 +16,7 @@ from config import (
 )
 from spotify_authorization import (
     exchange_code_for_token,
-    get_user_id,
+    get_user_information,
     get_user_playlist,
     refresh_token,
 )
@@ -73,16 +74,30 @@ def callback():
 
 
 @views_blueprint.route("/user-id")
-def user_id():
+def user_information():
     if "access_token" not in session:
         return redirect("/login")
 
     if datetime.now().timestamp() > session["expires_at"]:
         return redirect("/refresh-token")
 
-    session["user_id"] = get_user_id(session["access_token"], API_BASE_URL)
+    user_information = get_user_information(session["access_token"], API_BASE_URL)
 
-    return redirect("/playlists")
+    session["user_id"] = user_information.id
+    session["display_name"] = user_information.display_name
+
+    return redirect("/main")
+
+
+@views_blueprint.route("/main")
+def main_page():
+    if "access_token" not in session:
+        return redirect("/login")
+
+    if datetime.now().timestamp() > session["expires_at"]:
+        return redirect("/refresh-token")
+
+    return render_template("index.html", username=session["display_name"])
 
 
 @views_blueprint.route("/playlists")

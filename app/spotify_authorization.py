@@ -1,6 +1,9 @@
 import requests
 
+from collections import namedtuple
 from typing import Dict
+
+User = namedtuple("User", ["id", "display_name"])
 
 
 def exchange_code_for_token(
@@ -32,7 +35,7 @@ def exchange_code_for_token(
     return token_info
 
 
-def get_user_id(access_token: str, api_base_url: str) -> str:
+def get_user_information(access_token: str, api_base_url: str) -> str:
     """Gets the user id needed to retrieve the playlists
 
     Arguments:
@@ -47,7 +50,9 @@ def get_user_id(access_token: str, api_base_url: str) -> str:
     response = requests.request("GET", f"{api_base_url}/me", headers=headers)
     user_info = response.json()
 
-    return user_info["id"]
+    user = User(id=user_info["id"], display_name=user_info["display_name"])
+
+    return user
 
 
 def get_user_playlist(access_token: str, api_base_url: str, user_id: str) -> Dict:
