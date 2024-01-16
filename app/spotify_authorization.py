@@ -1,6 +1,7 @@
 import requests
 
 from collections import namedtuple
+from loguru import logger
 from typing import Dict
 
 User = namedtuple("User", ["id", "display_name"])
@@ -35,19 +36,18 @@ def exchange_code_for_token(
     return token_info
 
 
-def get_user_information(access_token: str, api_base_url: str) -> str:
+def get_user_information(access_token: str) -> str:
     """Gets the user id needed to retrieve the playlists
 
     Arguments:
         access_token {str} -- access token needed to access user information such as playlists
-        api_base_url {str} -- the base api endpoint
 
     Returns:
         str -- the user's id
     """
     headers = {"Authorization": f"Bearer {access_token}"}
 
-    response = requests.request("GET", f"{api_base_url}/me", headers=headers)
+    response = requests.request("GET", "https://api.spotify.com/v1/me", headers=headers)
     user_info = response.json()
 
     user = User(id=user_info["id"], display_name=user_info["display_name"])
@@ -55,12 +55,11 @@ def get_user_information(access_token: str, api_base_url: str) -> str:
     return user
 
 
-def get_user_playlist(access_token: str, api_base_url: str, user_id: str) -> Dict:
+def get_user_playlist(access_token: str, user_id: str) -> Dict:
     """Gets the users playlist in json format
 
     Arguments:
         access_token {str} -- access token needed to access user information such as playlists
-        api_base_url {str} -- the base api endpoint
         user_id {str} -- the user's id
 
     Returns:
@@ -69,7 +68,7 @@ def get_user_playlist(access_token: str, api_base_url: str, user_id: str) -> Dic
     headers = {"Authorization": f"Bearer {access_token}"}
 
     response = requests.request(
-        "GET", f"{api_base_url}/users/{user_id}/playlists", headers=headers
+        "GET", f"https://api.spotify.com/v1/users/{user_id}/playlists", headers=headers
     )
     playlists = response.json()
 
