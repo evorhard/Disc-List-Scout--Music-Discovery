@@ -81,7 +81,7 @@ def user_information():
     if datetime.now().timestamp() > session["expires_at"]:
         return redirect("/refresh-token")
 
-    user_information = get_user_information(session["access_token"], API_BASE_URL)
+    user_information = get_user_information(session["access_token"])
 
     session["user_id"] = user_information.id
     session["display_name"] = user_information.display_name
@@ -105,9 +105,7 @@ def get_playlists():
     if "user_id" not in session:
         return redirect("/login")
 
-    playlists = get_user_playlist(
-        session["access_token"], API_BASE_URL, session["user_id"]
-    )
+    playlists = get_user_playlist(session["access_token"])
 
     return jsonify(playlists)
 
