@@ -12,7 +12,7 @@ I personally love scouring lists of others wherein an album I love lives; howeve
 
 - **Language**: Python
 - **Libraries**: Requests, Flask
-- **APIs**: Spotify API
+- **APIs**: Spotify API, Discogs API
 
 ## Planned Features
 
