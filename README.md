@@ -11,8 +11,8 @@ I personally love scouring lists of others wherein an album I love lives; howeve
 ## Tech Stack
 
 - **Language**: Python
-- **Libraries**: Requests, Flask
-- **APIs**: Spotify API, Discogs API
+- **Libraries**: ZenRowsClient, Flask
+- **APIs**: Spotify API
 
 ## Planned Features
 
