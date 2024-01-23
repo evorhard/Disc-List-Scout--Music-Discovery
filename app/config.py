@@ -12,6 +12,7 @@ REDIRECT_URI = os.environ.get("REDIRECT_URI")
 AUTHORIZATION_URL = os.environ.get("AUTHORIZATION_URL")
 TOKEN_URL = os.environ.get("TOKEN_URL")
 API_BASE_URL = os.environ.get("API_BASE_URL")
+ZEN_ROWS = os.environ.get("ZEN_ROWS")
 
 # Other globals
 SCOPE = "user-read-private user-read-email"
