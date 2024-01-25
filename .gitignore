@@ -6,7 +6,7 @@ planning.md
 *.zip
 src/config.py
 tests
-test.html
+*.html
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
