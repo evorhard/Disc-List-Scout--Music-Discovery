@@ -1,5 +1,9 @@
 # Disc List Scout: Music Discovery
 
+# PROJECT ON HOLD
+
+This was always just a pet project to make me finding new albums to listen to and add to my playlist for albums to check out easier; however both Discogs and RYM have good bot protection and, either would have to massively complicate this project to get around it or pay for a service which I do not want to do.
+
 ## Description
 
 Disc List Scout is a Python-based application designed to help the way music enthusiasts discover new albums. The way it does this is by allowing users to input an album title, then scouring user-curated lists on platforms like Discogs and RateYourMusic to compile, or add to an existing, Spotify playlist.
